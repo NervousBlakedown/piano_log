@@ -1,12 +1,10 @@
-# Piano Log Reference.
 # Memorization in ten-minute intervals.
-# Print measure groupings for Spreadsheet (four measures, eight measures, etc.).
 
-def music_measures_group_one(): # parameter should return measure number total.
-    for i in range(1, 201, 4): # start, stop, step (AKA interval; step keeps alliteration game going strong.)
-        print((i), "-", i + 3) # last number should be one less than range interval.
-music_measures_group_one() # call the function; parentheses necessary.
-print("\n") # line break!
+def music_measures_group_one(): 
+    for i in range(1, 201, 4): # stop number = total number of measures
+        print((i), "-", i + 3) 
+music_measures_group_one() 
+print("\n") 
 
 
 def music_measures_group_two():
