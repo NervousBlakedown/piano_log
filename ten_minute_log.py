@@ -1,5 +1,4 @@
 # Memorization in ten-minute intervals.
-
 def music_measures_group_one(): 
     for i in range(1, 201, 4): # stop number = total number of measures
         print((i), "-", i + 3) 
