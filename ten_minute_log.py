@@ -1,8 +1,7 @@
 # Piano Log Reference.
-# Add condition to functions/for loops that print the remainder to match the measure number.
-# Count number of measure groups, tell user how long you'll spend if you stick to this script to memorize the music piece.
-
-import math
+# Add remainder for odd-number measure input to end of loop, count it as normal.
+# Get whole total.  Append to blank list
+# import math
 # import numpy as np
 # import pandas as pd
 # import matplotlib.pyplot as plt
@@ -13,8 +12,6 @@ timer_total = int(input("Enter the number of minutes you will spend on each smal
 print("\n")
 
 print("Phase I: 4-measure sections")
-print("The measure number sections are: ")
-
 def music_measures_group_one(): # start, stop, step (AKA interval; step keeps alliteration game going strong.)
     for i in range(1, measure_total, 4): # last number should be one less than range interval.
         remainder = i + 1
@@ -36,7 +33,7 @@ def music_measures_group_one(): # start, stop, step (AKA interval; step keeps al
     last_group = measure_group_count[-1]
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
-    print(str(final_measure_group_count) + " sections")
+    print(str(final_measure_group_count) + " sections total")
 
 music_measures_group_one() # call the function; parentheses necessary.
 
@@ -56,8 +53,6 @@ print("\n")
 
 
 print("Phase 2: 8-measure sections")
-print("The measure number sections are: ")
-
 def music_measures_group_two():
     for i in range(1, measure_total, 8):
         print((i), "-", i + 7)
@@ -77,7 +72,7 @@ def music_measures_group_two():
     last_group = measure_group_count[-1]
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
-    print(str(final_measure_group_count) + " sections")
+    print(str(final_measure_group_count) + " sections total")
 
 music_measures_group_two()
 
@@ -97,8 +92,6 @@ print("\n")
 
 
 print("Phase 3: 16-measure sections")
-print("The measure number sections are: ")
-
 def music_measures_group_three():
     for i in range(1, measure_total, 16):
         print((i), "-", i + 15)
@@ -118,7 +111,7 @@ def music_measures_group_three():
     last_group = measure_group_count[-1]
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
-    print(str(final_measure_group_count) + " sections")
+    print(str(final_measure_group_count) + " sections total")
 music_measures_group_three()
 
 measure_group_count = list(range(1, measure_total, 16))
@@ -137,8 +130,6 @@ print("\n")
 
 
 print("Phase 4: 32-measure sections")
-print("The measure number sections are: ")
-
 def music_measures_group_four():
     for i in range(1, measure_total, 32):
         print((i), "-", i + 31)
@@ -158,7 +149,7 @@ def music_measures_group_four():
     last_group = measure_group_count[-1]
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
-    print(str(final_measure_group_count) + " sections")
+    print(str(final_measure_group_count) + " sections total")
 music_measures_group_four()
 
 measure_group_count = list(range(1, measure_total, 32))
@@ -176,8 +167,6 @@ print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minute
 print("\n")
 
 print("Phase 5: 64-measure sections")
-print("The measure number sections are: ")
-
 def music_measures_group_five():
     for i in range(1, measure_total, 64):
         print((i), "-", i + 63)
@@ -197,7 +186,7 @@ def music_measures_group_five():
     last_group = measure_group_count[-1]
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
-    print(str(final_measure_group_count) + " sections")
+    print(str(final_measure_group_count) + " sections total")
 music_measures_group_five()
 
 measure_group_count = list(range(1, measure_total, 64))
@@ -216,8 +205,6 @@ print("\n")
 
 
 print("Phase 6: 128-measure sections")
-print("The measure number sections are: ")
-
 def music_measures_group_six():
     for i in range(1, measure_total, 128):
         print((i), "-", i + 127)
@@ -237,7 +224,7 @@ def music_measures_group_six():
     last_group = measure_group_count[-1]
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
-    print(str(final_measure_group_count) + " sections")
+    print(str(final_measure_group_count) + " sections total")
 music_measures_group_six()
 
 measure_group_count = list(range(1, measure_total, 128))
@@ -260,4 +247,4 @@ biggest_total_hours = rounded_minutes / 60
 rounded_biggest_total = round(biggest_total, 1)
 rounded_biggest_total_hours = round(biggest_total_hours, 2)
 
-print("The total hours for the whole piece will be " + str(biggest_total_hours) + " hours, or " + str(biggest_total) + " minutes, if you stick to the plan.  Happy practicing!")
+print("The total hours for the whole piece will be " + str(rounded_biggest_total_hours) + " hours, or " + str(rounded_biggest_total) + " minutes, if you stick to the plan.  Happy practicing!")
