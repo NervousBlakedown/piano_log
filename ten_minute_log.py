@@ -1,20 +1,14 @@
 # Piano Log Reference.
 # Add remainder for odd-number measure input to end of loop, count it as normal.
-# Get whole total.  Append to blank list
-# import math
-# import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
-
-measure_total = int(input("Thanks for using Blake's music memory practice aid! Enter the total number of measures in your piece of music, then hit the return key: "))
-
-timer_total = int(input("Enter the number of minutes you will spend on each small section, then hit the return key: "))
+# Get whole total (append to blank list?)
+# If measure total smaller than phase number, skip it.
 print("\n")
+measure_total = int(input("Thank you for using Blake's music memorization aid! \nEnter the total number of measures in your piece of music, then hit the return key: "))
+timer_total = int(input("Enter the number of minutes you will spend on each small section, then hit the return key: "))
 
 print("Phase I: 4-measure sections")
 def music_measures_group_one(): # start, stop, step (AKA interval; step keeps alliteration game going strong.)
     for i in range(1, measure_total, 4): # last number should be one less than range interval.
-        remainder = i + 1
         print((i), "-", i + 3)
 
         if i > measure_total:
@@ -23,7 +17,7 @@ def music_measures_group_one(): # start, stop, step (AKA interval; step keeps al
             continue
 
         if measure_total % 2 != 0: # even numbers modulo 2 return 0, odd numbers modulo 2 return 1.
-            print(remainder)#(i), "-", i - 1)
+            print((i), "-", i - 1)
         else:
             print(None)
 
@@ -34,7 +28,6 @@ def music_measures_group_one(): # start, stop, step (AKA interval; step keeps al
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
     print(str(final_measure_group_count) + " sections total")
-
 music_measures_group_one() # call the function; parentheses necessary.
 
 measure_group_count = list(range(1, measure_total, 4))
@@ -44,11 +37,10 @@ final_measure_group_count = measure_index + 1
 
 minutes_spent = timer_total * final_measure_group_count
 hours_spent = (timer_total * final_measure_group_count) / 60
-
 rounded_minutes = round(minutes_spent, 1)
 rounded_hours = round(hours_spent, 2)
 
-print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minutes) + " minutes, to memorize Phase 1")
+print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 1")
 print("\n")
 
 
@@ -73,7 +65,6 @@ def music_measures_group_two():
     measure_index = measure_group_count.index(last_group)
     final_measure_group_count = measure_index + 1
     print(str(final_measure_group_count) + " sections total")
-
 music_measures_group_two()
 
 measure_group_count = list(range(1, measure_total, 8))
@@ -87,7 +78,7 @@ hours_spent = (timer_total * final_measure_group_count) / 60
 rounded_minutes = round(minutes_spent, 1)
 rounded_hours = round(hours_spent, 2)
 
-print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minutes) + " minutes, to memorize Phase 2")
+print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 2")
 print("\n")
 
 
@@ -125,7 +116,7 @@ hours_spent = (timer_total * final_measure_group_count) / 60
 rounded_minutes = round(minutes_spent, 1)
 rounded_hours = round(hours_spent, 2)
 
-print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minutes) + " minutes, to memorize Phase 3")
+print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 3")
 print("\n")
 
 
@@ -163,7 +154,7 @@ hours_spent = (timer_total * final_measure_group_count) / 60
 rounded_minutes = round(minutes_spent, 1)
 rounded_hours = round(hours_spent, 2)
 
-print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minutes) + " minutes, to memorize Phase 4")
+print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 4")
 print("\n")
 
 print("Phase 5: 64-measure sections")
@@ -200,9 +191,8 @@ hours_spent = (timer_total * final_measure_group_count) / 60
 rounded_minutes = round(minutes_spent, 1)
 rounded_hours = round(hours_spent, 2)
 
-print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minutes) + " minutes, to memorize Phase 5")
+print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 5")
 print("\n")
-
 
 print("Phase 6: 128-measure sections")
 def music_measures_group_six():
@@ -238,7 +228,7 @@ hours_spent = (timer_total * final_measure_group_count) / 60
 rounded_minutes = round(minutes_spent, 1)
 rounded_hours = round(hours_spent, 2)
 
-print("Approximately " + str(rounded_hours) + " hours, or " + str(rounded_minutes) + " minutes, to memorize Phase 6")
+print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes, to memorize Phase 6")
 print("\n")
 
 biggest_total = rounded_minutes
@@ -247,4 +237,4 @@ biggest_total_hours = rounded_minutes / 60
 rounded_biggest_total = round(biggest_total, 1)
 rounded_biggest_total_hours = round(biggest_total_hours, 2)
 
-print("The total hours for the whole piece will be " + str(rounded_biggest_total_hours) + " hours, or " + str(rounded_biggest_total) + " minutes, if you stick to the plan.  Happy practicing!")
+print("Total time spent on piece: " + str(rounded_biggest_total_hours) + " hours/" + str(rounded_biggest_total) + " minutes if you stick to the plan.  Happy practicing!")
