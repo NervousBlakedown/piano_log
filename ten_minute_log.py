@@ -6,6 +6,8 @@ print("\n")
 measure_total = int(input("Thank you for using Blake's music memorization aid! \nEnter the total number of measures in your piece of music, then hit the return key: "))
 timer_total = int(input("Enter the number of minutes you will spend on each small section, then hit the return key: "))
 
+
+# Phase I
 print("Phase I: 4-measure sections")
 def music_measures_group_one(): # start, stop, step (AKA interval; step keeps alliteration game going strong.)
     for i in range(1, measure_total, 4): # last number should be one less than range interval.
@@ -44,6 +46,7 @@ print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " m
 print("\n")
 
 
+# Phase II
 print("Phase 2: 8-measure sections")
 def music_measures_group_two():
     for i in range(1, measure_total, 8):
@@ -82,6 +85,7 @@ print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " m
 print("\n")
 
 
+# Phase III
 print("Phase 3: 16-measure sections")
 def music_measures_group_three():
     for i in range(1, measure_total, 16):
@@ -120,6 +124,7 @@ print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " m
 print("\n")
 
 
+# Phase IV
 print("Phase 4: 32-measure sections")
 def music_measures_group_four():
     for i in range(1, measure_total, 32):
@@ -157,6 +162,8 @@ rounded_hours = round(hours_spent, 2)
 print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 4")
 print("\n")
 
+
+# Phase V
 print("Phase 5: 64-measure sections")
 def music_measures_group_five():
     for i in range(1, measure_total, 64):
@@ -194,6 +201,8 @@ rounded_hours = round(hours_spent, 2)
 print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes to memorize Phase 5")
 print("\n")
 
+
+# Phase VI
 print("Phase 6: 128-measure sections")
 def music_measures_group_six():
     for i in range(1, measure_total, 128):
@@ -231,6 +240,8 @@ rounded_hours = round(hours_spent, 2)
 print("Estimated " + str(rounded_hours) + " hours/" + str(rounded_minutes) + " minutes, to memorize Phase 6")
 print("\n")
 
+
+# Totals
 biggest_total = rounded_minutes
 biggest_total_hours = rounded_minutes / 60
 
